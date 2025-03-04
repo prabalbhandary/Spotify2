@@ -24,7 +24,7 @@ const corsOptions = {
 const port = process.env.PORT || 5000;
 
 app.use(cors(corsOptions));
-app.use(urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan("dev"));
 
