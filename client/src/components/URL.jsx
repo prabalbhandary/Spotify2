@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:4000/api/v1"
+export const BASE_URL = "https://spotify2-8hoj.onrender.com/api/v1"
