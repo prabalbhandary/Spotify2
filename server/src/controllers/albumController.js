@@ -30,7 +30,7 @@ const addAlbum = async (req, res) => {
 
 const listAlbum = async (req, res) => {
   try {
-    const allAlbums = await Album.find({});
+    const allAlbums = await Album.find({}).sort({ createdAt: -1 });
     res.status(201).json({ success: true, message: "Album List Fetched Success", albums: allAlbums });
   } catch (error) {
     console.log("Failed at listAlbum, ", error);

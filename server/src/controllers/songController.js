@@ -38,7 +38,7 @@ const addSong = async (req, res) => {
 
 const listSong = async (req, res) => {
   try {
-    const allSongs = await Song.find({});
+    const allSongs = await Song.find({}).sort({ createdAt: -1 });
     res.status(201).json({ success: true, message: "Song List Fetched Success", songs: allSongs });
   } catch (error) {
     console.log("Failed at listSong, ", error);
