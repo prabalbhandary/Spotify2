@@ -17,8 +17,6 @@ connectDB();
 connectCloudinary();
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "./client/build")));
-app.use(express.static(path.join(__dirname, "./admin/build")));
 
 const corsOptions = {
     origin: [process.env.CLIENT_URL, process.env.ADMIN_URL],
