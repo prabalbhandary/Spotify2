@@ -84,6 +84,7 @@ function AddSong() {
           <label htmlFor="song">
             <img
               src={song ? assets.upload_added : assets.upload_song}
+              accept="audio/*"
               className="w-24 cursor-pointer"
               alt="upload_song"
             />
