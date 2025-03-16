@@ -116,11 +116,11 @@ function Player() {
           type="range"
           min="0"
           max="1"
-          step="0.01"
+          step="1"
           value={volume}
           onChange={handleVolumeChange}
           color="red"
-          className="bg-green-800 appearance-auto h-1 w-[100%] opacity-70 hover:opacity-100 rounded-lg"
+          className="bg-green-800 appearance-auto h-1 w-full opacity-70 hover:opacity-100 rounded-lg"
         />
         <img
           className="w-4"
