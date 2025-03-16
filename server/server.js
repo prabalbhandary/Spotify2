@@ -4,6 +4,7 @@ import "dotenv/config"
 import "colors"
 import morgan from "morgan";
 import bodyParser from "body-parser";
+import path from "path";
 import songRouter from "./src/routes/songRoute.js";
 import connectDB from "./src/config/mongodb.js";
 import connectCloudinary from "./src/config/cloudinary.js";
@@ -14,6 +15,10 @@ const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./admin/build")));
 
 const corsOptions = {
     origin: [process.env.CLIENT_URL, process.env.ADMIN_URL],
@@ -32,6 +37,14 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/api/song", songRouter)
 app.use("/api/album", albumRouter)
 app.get('/', (req, res) => res.send("API Working"));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./admin/build/index.html"));
+});
 
 
 app.listen(port, () => console.log(`Server started http://localhost:${port}`.bgMagenta.white));
