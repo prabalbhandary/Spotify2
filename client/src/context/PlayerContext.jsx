@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export const PlayerContext = createContext();
 
 const PlayerContextProvider = (props) => {
-  const url = "http://localhost:5000";
+  const url = "https://spotify2-kvu7.vercel.app/";
 
   const audioRef = useRef();
   const seekBar = useRef();

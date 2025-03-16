@@ -6,7 +6,7 @@ import ListAlbum from "./pages/ListAlbum";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 
-export const url = "http://localhost:5000";
+export const url = "https://spotify2-kvu7.vercel.app/";
 
 const App = () => {
   return (
