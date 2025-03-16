@@ -36,13 +36,12 @@ app.use(express.urlencoded({ extended: true }))
 //initializing routes
 app.use("/api/song", songRouter)
 app.use("/api/album", albumRouter)
-app.get('/', (req, res) => res.send("API Working"));
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.get("*", (req, res) => {
+app.get("/admin", (req, res) => {
     res.sendFile(path.join(__dirname, "./admin/build/index.html"));
 });
 
