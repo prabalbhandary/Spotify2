@@ -21,7 +21,7 @@ const App = () => {
       <audio
         ref={audioRef}
         src={track ? track.file : ""}
-        preload="none"
+        preload="auto"
       ></audio>
     </div>
   );
