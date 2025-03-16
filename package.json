@@ -1,0 +1,28 @@
+{
+  "name": "spotify-backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "./server/server.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon ./server/server.js",
+    "client": "npm run dev --prefix ./client",
+    "admin": "npm run dev --prefix ./admin",
+    "start": "concurrently \"npm run client\" \"npm run admin\" \"npm run server\""
+  },
+  "author": "Prabal Bhandary",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cloudinary": "^2.2.0",
+    "colors": "^1.4.0",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4"
+  }
+}
