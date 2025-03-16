@@ -6,7 +6,7 @@ import ListAlbum from "./pages/ListAlbum";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 
-export const url = "https://spotify2-ea47.onrender.com/";
+export const url = "https://spotify2-ea47.onrender.com";
 
 const App = () => {
   return (
