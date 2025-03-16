@@ -36,11 +36,11 @@ app.use("/api/song", songRouter)
 app.use("/api/album", albumRouter)
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
 app.get("/admin", (req, res) => {
-    res.sendFile(path.join(__dirname, "./admin/build/index.html"));
+    res.sendFile(path.join(__dirname, "./admin/dist/index.html"));
 });
 
 
