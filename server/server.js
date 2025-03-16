@@ -19,7 +19,7 @@ connectCloudinary();
 const __dirname = path.resolve();
 
 const corsOptions = {
-    origin: [process.env.CLIENT_URL, process.env.ADMIN_URL],
+    origin: "*",
     credentials: true
 }
 
