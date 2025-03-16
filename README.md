@@ -25,8 +25,8 @@ It includes functionalities for creating, browsing, and removing albums, as well
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/nuricanbrdmr/Spotify-Clone-MERN-Website.git
-    cd Spotify-Clone-MERN-Website
+    https://github.com/prabalbhandary/Spotify2
+    cd Spotify2
     ```
 
 2. Set up environment variables:
@@ -40,27 +40,14 @@ It includes functionalities for creating, browsing, and removing albums, as well
 
 3. Run the backend server:
     ```bash
-    cd spotify-backend
     npm install
     npm start
-    ```
-4. Run the backend server:
-    ```bash
-    cd spotify-admin
-    npm install
-    npm run dev
-    ```
-
-5. Run the frontend:
-    ```bash
-    cd spotify-frontend
-    npm install
-    npm run dev
+    With the help of concurrently it will run all the project
     ```
 
 ## Usage
 
-1. Open your browser and navigate to `http://localhost:5173`.
+1. Open your browser and navigate to `http://localhost:5173` & `http://localhost:5174` (for admin).
 2. Create new albums and songs on the Spotify Admin page.
 3. Browse albums and songs, create playlists, and enjoy music.
 
